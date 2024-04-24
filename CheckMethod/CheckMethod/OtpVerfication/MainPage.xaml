@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:OTPVerificationSample"
+             x:Class="OTPVerificationSample.MainPage">
+
+    <StackLayout>
+        <Grid HeightRequest="200" BackgroundColor="Tomato">
+            <StackLayout VerticalOptions="Center" Padding="20">
+                <Label Text="Your App Name" TextColor="White" FontSize="30" FontAttributes="Bold"/>
+                <Label Text="Please enter your mobile number." FontSize="20" TextColor="White"/>
+            </StackLayout>
+        </Grid>
+        <StackLayout Padding="20">
+            <Entry Placeholder="Mobile No" MaxLength="10" Keyboard="Numeric" x:Name="mobileNumber"/>
+            <Entry Placeholder="OTP" MaxLength="4" Keyboard="Numeric" x:Name="otp" IsVisible="False"/>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="By continuing you may receive an SMS&#x0a;for verification" FontSize="12" 
+                       TextColor="Gray" VerticalOptions="Center"/>
+                <Button Text="Next" CornerRadius="25" WidthRequest="80" HeightRequest="40" BackgroundColor="#32b843" 
+                TextColor="White" HorizontalOptions="EndAndExpand" Margin="3,0,0,0" Clicked="SendOTP" x:Name="btnNext"/>
+            </StackLayout>
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>
